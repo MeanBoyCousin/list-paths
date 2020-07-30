@@ -1,6 +1,7 @@
-const fs = require('fs')
+import fs from 'fs'
 
-const ignorePaths = require('./helpers/ignorePaths')
+//const ignorePaths = require('./helpers/ignorePaths')
+import { ignorePaths } from './helpers/ignorePaths'
 
 interface Options {
     ignoreNodeModules?: boolean
@@ -16,7 +17,7 @@ const listPaths = (
         ignoreGit = true,
         useGitIgnore = true,
         includeFiles = false
-    }: Options
+    }: Options = {}
 ): string[] => {
     return [
         `${path}/`,
@@ -41,8 +42,9 @@ const listPaths = (
                             })
                         )
                     }
-                    if (includeFiles && fs.statSync(fullPath).isFile())
+                    if (includeFiles && fs.statSync(fullPath).isFile()) {
                         pathList.push(fullPath)
+                    }
                 }
                 return pathList
             }, [])
@@ -50,4 +52,5 @@ const listPaths = (
     ].flat()
 }
 
-export {}
+//module.exports = listPaths
+export { listPaths }

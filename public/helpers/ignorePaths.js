@@ -1,9 +1,14 @@
 "use strict";
-const fs = require('fs');
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ignorePaths = void 0;
+const fs_1 = __importDefault(require("fs"));
 const ignorePaths = (ignoreNodeModules, ignoreGit, useGitIgnore) => {
     const ignoreNM = 'node_modules';
     const ignoreG = '.git';
-    const gitIgnoreArray = fs
+    const gitIgnoreArray = fs_1.default
         .readFileSync('.gitignore', 'utf8')
         .split('\r\n')
         .filter((path) => {
@@ -17,9 +22,9 @@ const ignorePaths = (ignoreNodeModules, ignoreGit, useGitIgnore) => {
         ignoreGit ? ignoreG : null,
         ...(useGitIgnore ? gitIgnoreArray : [])
     ].filter((path) => {
-        return typeof path !== null;
+        return path !== null;
     });
     return ignoreList;
 };
-module.exports = ignorePaths;
+exports.ignorePaths = ignorePaths;
 //# sourceMappingURL=ignorePaths.js.map

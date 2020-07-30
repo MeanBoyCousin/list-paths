@@ -1,4 +1,4 @@
-const fs = require('fs')
+import fs from 'fs'
 
 const ignorePaths = (
     ignoreNodeModules: boolean,
@@ -24,10 +24,11 @@ const ignorePaths = (
         ignoreGit ? ignoreG : null,
         ...(useGitIgnore ? gitIgnoreArray : [])
     ].filter((path): path is string => {
-        return typeof path !== null
+        return path !== null
     })
 
     return ignoreList
 }
 
-module.exports = ignorePaths
+//module.exports = ignorePaths
+export { ignorePaths }
