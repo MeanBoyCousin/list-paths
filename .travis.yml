@@ -1,0 +1,19 @@
+language: node_js
+node_js: 
+  - "stable"
+cache:
+  directories:
+    - "node_modules"
+script:
+  - npm run lint
+  - npm run lint-tests
+  - npm run type-check
+  - npm run test-cov
+  - npm run mutate
+  - npm run compile
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_TOKEN"

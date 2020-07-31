@@ -42,7 +42,8 @@
         }
     },
     "files": [
-        "public/**/*.js", "public/**/*.d.ts" 
+        "public/**/*.js",
+        "public/**/*.d.ts"
     ],
     "repository": {
         "type": "git",
