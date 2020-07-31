@@ -95,7 +95,7 @@ describe('Check that no error is thrown if no .gitignore file exists', () => {
     })
 
     test('should return an empty array if no .gitignore exists', () => {
-        console.log(ignorePaths(false, false, true))
+        expect(ignorePaths(false, false, true)).toEqual([]);
         expect(ignorePaths(false, false, true).length).toEqual(0)
         expect(Array.isArray(ignorePaths(false, false, true))).toBeTruthy()
     })
