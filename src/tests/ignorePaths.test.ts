@@ -1,6 +1,5 @@
 import mock from 'mock-fs'
 
-//const ignorePaths = require('../helpers/ignorePaths')
 import { ignorePaths } from '../helpers/ignorePaths'
 
 describe('Check that array of paths to ignore is created', () => {
@@ -14,13 +13,17 @@ describe('Check that array of paths to ignore is created', () => {
                 refs: {}
             },
             node_modules: {
-                bin: {},
-                build: {},
-                node_modules: {},
-                'package.json': '...',
-                'README.md': '...'
+                jest: {
+                    bin: {},
+                    build: {},
+                    node_modules: {},
+                    LICENSE: '...',
+                    'package.json': '...',
+                    'README.md': '...'
+                }
             },
-            '.gitignore': 'coverage\r\nreports\r\n'
+            '.gitignore':
+                'coverage\r\nreports\r\nnode_modules\r\n.git\r\n\r\n# comment'
         })
     })
 

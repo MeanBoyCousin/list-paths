@@ -1,6 +1,5 @@
 import mock from 'mock-fs'
 
-//const listPaths = require('../listPaths')
 import { listPaths } from '../listPaths'
 
 describe('Check that array of paths to ignore is created', () => {

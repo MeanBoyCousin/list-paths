@@ -1,6 +1,5 @@
 import fs from 'fs'
 
-//const ignorePaths = require('./helpers/ignorePaths')
 import { ignorePaths } from './helpers/ignorePaths'
 
 interface Options {
@@ -52,5 +51,4 @@ const listPaths = (
     ].flat()
 }
 
-//module.exports = listPaths
 export { listPaths }

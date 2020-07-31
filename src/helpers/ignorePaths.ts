@@ -30,5 +30,4 @@ const ignorePaths = (
     return ignoreList
 }
 
-//module.exports = ignorePaths
 export { ignorePaths }
