@@ -1,6 +1,6 @@
 {
     "name": "list-paths",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Fetch all paths in the working directory.",
     "main": "public/listPaths.js",
     "types": "public/listPaths.d.ts",

@@ -7,17 +7,19 @@ const ignorePaths = (
 ): string[] => {
     const ignoreNM: string = 'node_modules'
     const ignoreG: string = '.git'
-    const gitIgnoreArray: string[] = fs
-        .readFileSync('.gitignore', 'utf8')
-        .split('\r\n')
-        .filter((path: string) => {
-            return (
-                path !== '' && // Remove white-space
-                !path.includes('#') && // Remove comments
-                path !== 'node_modules' &&
-                path !== '.git'
-            )
-        })
+    const gitIgnoreArray: string[] = fs.existsSync('.gitignore')
+        ? fs
+            .readFileSync('.gitignore', 'utf8')
+            .split('\r\n')
+            .filter((path: string) => {
+                return (
+                      path !== '' && // Remove white-space
+                      !path.includes('#') && // Remove comments
+                    path !== 'node_modules' &&
+                    path !== '.git'
+                )
+            })
+        : []
 
     const ignoreList: string[] = [
         ignoreNodeModules ? ignoreNM : null,
@@ -30,4 +32,4 @@ const ignorePaths = (
     return ignoreList
 }
 
-export { ignorePaths }
+module.exports = ignorePaths

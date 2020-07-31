@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import { ignorePaths } from './helpers/ignorePaths'
+const ignorePaths = require('./helpers/ignorePaths')
 
 interface Options {
     ignoreNodeModules?: boolean
@@ -51,4 +51,4 @@ const listPaths = (
     ].flat()
 }
 
-export { listPaths }
+module.exports = listPaths

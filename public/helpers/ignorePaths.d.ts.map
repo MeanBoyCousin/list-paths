@@ -1,1 +1,1 @@
-{"version":3,"file":"ignorePaths.d.ts","sourceRoot":"","sources":["../../src/helpers/ignorePaths.ts"],"names":[],"mappings":"AAEA,QAAA,MAAM,WAAW,sBACM,OAAO,aACf,OAAO,gBACJ,OAAO,KACtB,MAAM,EAwBR,CAAA;AAED,OAAO,EAAE,WAAW,EAAE,CAAA"}
+{"version":3,"file":"ignorePaths.d.ts","sourceRoot":"","sources":["../../src/helpers/ignorePaths.ts"],"names":[],"mappings":""}
