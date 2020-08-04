@@ -1,1 +1,1 @@
-{"version":3,"file":"listPaths.d.ts","sourceRoot":"","sources":["../src/listPaths.ts"],"names":[],"mappings":""}
+{"version":3,"file":"listPaths.d.ts","sourceRoot":"","sources":["../src/listPaths.ts"],"names":[],"mappings":"AAIA,UAAU,OAAO;IACb;;;OAGG;IACH,iBAAiB,CAAC,EAAE,OAAO,CAAA;IAC3B;;;OAGG;IACH,SAAS,CAAC,EAAE,OAAO,CAAA;IACnB;;;OAGG;IACH,YAAY,CAAC,EAAE,OAAO,CAAA;IACtB;;;OAGG;IACH,YAAY,CAAC,EAAE,OAAO,CAAA;CACzB;AAED;;;;;;;GAOG;AACH,QAAA,MAAM,SAAS,UACL,MAAM,iEAMT,OAAO,KACX,MAAM,EAgCR,CAAA;AAED,SAAS,SAAS,CAAA"}

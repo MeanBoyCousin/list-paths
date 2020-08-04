@@ -1,6 +1,7 @@
 import mock from 'mock-fs'
 
-const ignorePaths = require('../helpers/ignorePaths')
+//const ignorePaths = require('../helpers/ignorePaths')
+import ignorePaths from '../helpers/ignorePaths'
 
 describe('Check that array of paths to ignore is created', () => {
     beforeAll(() => {
@@ -95,7 +96,7 @@ describe('Check that no error is thrown if no .gitignore file exists', () => {
     })
 
     test('should return an empty array if no .gitignore exists', () => {
-        expect(ignorePaths(false, false, true)).toEqual([]);
+        expect(ignorePaths(false, false, true)).toEqual([])
         expect(ignorePaths(false, false, true).length).toEqual(0)
         expect(Array.isArray(ignorePaths(false, false, true))).toBeTruthy()
     })

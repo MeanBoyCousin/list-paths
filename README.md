@@ -15,6 +15,7 @@ $ npm install list-paths
 ```
 
 ## Usage
+
 #### Find all paths in the working directory.
 
 ```js
@@ -31,19 +32,19 @@ const dir = listPaths('./src') // [ './src', './src/helpers', 'etc...' ]
 
 ## API
 
-`listPaths` accepts 2 parameters, ```path``` & an ```options object```.
+`listPaths` accepts 2 parameters, `path` & an `options object`.
 
 ```js
-listPaths(path, { ignoreNodeModules, ignoreGit, useGitIgnore, includeFiles })
+listPaths(path, { ignoreNodeModules, ignoreGit, useGitIgnore, includeFiles }) => {string[]}
 ```
 
-| Paramater         | Type    | Default | Description                                                      |
-| ----------------- | ------- | ------- | ---------------------------------------------------------------- |
-| path              | string  | "."     | Sets the top-level path to search.                            |
-| ignoreNodeModules | boolean | true    | Specifies wether to ignore the 'node_modules' directory.         |
-| ignoreGit         | boolean | true    | Specifies wether to ignore the '.git' directory.                 |
-| useGitIgnore      | boolean | true    | Specifies wether to use .gitignore as a list of paths to ignore. |
-| includeFiles      | boolean | false   | Specifies wether to include file paths.                          |
+| Parameter         | Type    | Default | Description                             |
+| ----------------- | ------- | ------- | --------------------------------------- |
+| path              | string  | "."     | The directory path to searched.         |
+| ignoreNodeModules | boolean | true    | If true, ignores 'node_modules' folder. |
+| ignoreGit         | boolean | true    | If true, ignores '.git' folder.         |
+| useGitIgnore      | boolean | true    | If true, ignores paths in '.gitignore'. |
+| includeFiles      | boolean | false   | If true, includes file paths.           |
 
 ## Authors
 

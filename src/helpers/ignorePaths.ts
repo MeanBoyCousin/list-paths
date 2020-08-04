@@ -1,5 +1,14 @@
 import fs from 'fs'
 
+/**
+ * A function that lists all paths that should be ignored.
+ *
+ * @param ignoreNodeModules If true, 'node_modules' will be added to the list of paths to ignore.
+ * @param ignoreGit If true, '.git' will be added to the list of paths to ignore.
+ * @param useGitIgnore If true, paths will be extracted from '.gitignore' and added to the list of paths to ignore.
+ *
+ * @returns An array of strings matching paths to be ignored.
+ */
 const ignorePaths = (
     ignoreNodeModules: boolean,
     ignoreGit: boolean,
@@ -32,4 +41,4 @@ const ignorePaths = (
     return ignoreList
 }
 
-module.exports = ignorePaths
+export = ignorePaths

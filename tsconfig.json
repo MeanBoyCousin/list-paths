@@ -5,6 +5,7 @@
         /* Basic Options */
         "target": "ES6",
         "module": "commonjs",
+        "moduleResolution": "node",
         "lib": ["ES2019"],
         "allowJs": true,
         // "checkJs": true,                       /* Report errors in .js files. */
@@ -14,7 +15,7 @@
         "sourceMap": true,
         "outDir": "./public",
         "rootDir": "./src",
-        "removeComments": true,
+        "removeComments": false,
         // "noEmit": true,                        /* Do not emit outputs. */
 
         /* Strict Type-Checking Options */
